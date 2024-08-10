@@ -1,34 +1,5 @@
 (function() {
   "use strict";
-  document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('hero-video');
-    const mainContent = document.getElementById('main-content');
-    const skeletonLoader = document.getElementById('skeleton-loader');
-
-    video.addEventListener('loadeddata', function() {
-        // Hide skeleton loader
-        skeletonLoader.style.display = 'none';
-        // Show main content
-        mainContent.style.display = 'block';
-        // Start playing the video
-        video.play();
-    });
-
-    // Fallback in case video doesn't load
-    setTimeout(function() {
-        if (mainContent.style.display === 'none') {
-            skeletonLoader.style.display = 'none';
-            mainContent.style.display = 'block';
-        }
-    }, 5000); // 5 seconds timeout
-});
-    const video = document.getElementById('hero-video');
-    const placeholder = document.getElementById('video-placeholder');
-
-    video.oncanplay = function() {
-      placeholder.style.display = 'none';
-      video.style.display = 'block';
-    };
   /**
    * Easy selector helper function
    */
