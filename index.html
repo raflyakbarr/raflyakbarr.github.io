@@ -22,7 +22,13 @@
 </head>
 
 <body>
-
+  <div id="skeleton-loader">
+    <div class="skeleton active" style="width: 60%;"></div>
+    <div class="skeleton active" style="width: 80%;"></div>
+    <div class="skeleton active" style="width: 70%;"></div>
+    <!-- Add more skeleton elements as needed -->
+</div>
+<div id="main-content">
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container">
@@ -52,8 +58,11 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
-    <video autoplay muted loop id="hero-video" preload="none" data-src="assets/videos/Raflyakbarr.mp4">
-      <source type="video/mp4">
+    <div id="video-placeholder" class="video-placeholder">
+      <img src="assets/img/loading.gif" alt="Loading...">
+    </div>
+    <video autoplay muted loop id="hero-video" style="display: none;">
+      <source src="assets/videos/Raflyakbarr.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
@@ -417,7 +426,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+</div>
 </body>
 
 </html>
