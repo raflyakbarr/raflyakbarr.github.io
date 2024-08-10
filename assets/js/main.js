@@ -1,6 +1,17 @@
 (function() {
   "use strict";
-
+    document.addEventListener("DOMContentLoaded", function() {
+    let video = document.getElementById('hero-video');
+    let observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.src = video.dataset.src;
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+    observer.observe(video);
+  });
   /**
    * Easy selector helper function
    */
